@@ -28,4 +28,21 @@ describe('Subtract tests', () => {
         const subArray = [1, 2];
         expect(subtract(subArray)).toEqual(-3);
     });    
+
+    it('should subtract three numbers', () => {
+        const subArray = [1, 2, 3];
+        expect(subtract(subArray)).toEqual(-6);
+    });
+
+    it(`should subtract negative numbers`, () => {
+        const subArray = [-1, -2, -3];
+        expect(subtract(subArray)).toEqual(6);
+    });
+
+    it(`should subtract floating point numbers`, () => {
+        const subArray = [0.1, 0.2];
+        expect(subtract(subArray)).toEqual(-0.30000000000000004);
+    });
+
+
 });
